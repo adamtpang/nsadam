@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nsadam</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%2310b981%22 rx=%2220%22/></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+                    },
+                    colors: {
+                        slate: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                        },
+                        emerald: {
+                            500: '#10b981',
+                            400: '#34d399',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            /* Slate 900 */
+            color: #f8fafc;
+            /* Slate 50 */
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .tech-tag {
+            font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace';
+            background: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #334155;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
+
+    <div class="max-w-2xl mx-auto px-6 py-12 md:py-20 space-y-16">
+
+        <!-- Hero Section -->
+        <header class="space-y-6 animate-fade-in-up">
+            <div
+                class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono tracking-wide uppercase">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Longtermer #2 | MDEC-Aligned | Full-Stack</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+                Adam Tomas: Dev & Architect for the <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">Learn-Earn
+                    Engine</span>
+            </h1>
+
+            <p class="text-xl text-slate-400 max-w-lg leading-relaxed">
+                Solving the 40/100 MDEC Quota Gap with Shipped Code.
+            </p>
+
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="https://github.com/adamtomaspang" target="_blank"
+                    class="glass-card px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-white/5 transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://x.com/adamtpang" target="_blank"
+                    class="glass-card px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-white/5 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path <div class="glass-card p-6 rounded-xl">
+                            <div class="mb-4">
+                                <h3 class="text-lg font-semibold text-white">The Learn-Earn Engine</h3>
+                                <p class="text-sm text-slate-400 mt-1">Goal: Unblock the MDEC Visa bottleneck by routing
+                                    $1M in idle
+                                    portfolio tasks to residents.</p>
+                            </div>
+                            <div class="flex items-center gap-3 mt-4">
+                                <div class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                                <span class="text-sm font-medium text-emerald-400">Proposal sent to Balaji. Routing
+                                    infrastructure
+                                    currently being built.</span>
+                            </div>
+            </div>
+            </section>
+
+            <!-- Shipped Code -->
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="text-emerald-500">02.</span> Shipped Code
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- SkillMarketCap -->
+                    <a href="https://www.skillmarketcap.com/" target="_blank"
+                        class="glass-card p-6 rounded-xl hover:border-emerald-500/50 transition-colors group block">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                                SkillMarketCap</h3>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">React/Next.js</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Real-time skill pricing data visualization.</p>
+                    </a>
+
+                    <!-- NS Tutorial Generator -->
+                    <a href="https://nstutorialgenerator.vercel.app/" target="_blank"
+                        class="glass-card p-6 rounded-xl hover:border-emerald-500/50 transition-colors group block">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                                Tutorial Generator</h3>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Next.js/AI</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Transform documentation into actionable tutorial scaffolds
+                            using
+                            AI.</p>
+                    </a>
+
+                    <!-- NS Issue Estimator -->
+                    <a href="https://nsissueestimator.vercel.app/" target="_blank"
+                        class="glass-card p-6 rounded-xl hover:border-emerald-500/50 transition-colors group block">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                                Issue Estimator</h3>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Next.js/AI</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Transform GitHub issues into actionable cost estimates using
+                            AI.
+                        </p>
+                    </a>
+
+                    <!-- Lightmark Leaderboard -->
+                    <a href="https://www.lightmark.app/leaderboard" target="_blank"
+                        class="glass-card p-6 rounded-xl hover:border-emerald-500/50 transition-colors group block">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                                Lightmark</h3>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">AI/SEO</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">AI Visibility Audit & Optimization.</p>
+                    </a>
+
+                    <!-- Darien Village -->
+                    <a href="https://darienvillage.vercel.app/" target="_blank"
+                        class="glass-card p-6 rounded-xl hover:border-emerald-500/50 transition-colors group block">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                                Darien Village</h3>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Web Platform</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Premium real estate investment in Próspera ZEDE.</p>
+                    </a>
+
+                    <!-- YourChore -->
+                    <a href="https://yourchore.com/" target="_blank"
+                        class="glass-card p-6 rounded-xl hover:border-emerald-500/50 transition-colors group block">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                                YourChore</h3>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Web Platform</span>
+                        </div>
+                        <p class="text-slate-400 text-sm">Campus life simplified - laundry & food delivery.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Technical Depth -->
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="text-emerald-500">03.</span> Technical Arsenal
+                </h2>
+                <div class="relative pl-8 space-y-8">
+                    <div class="timeline-line"></div>
+
+                    <!-- Item 1 -->
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[25px] top-1.5 h-3 w-3 rounded-full border-2 border-slate-700 bg-slate-900">
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">Backend & Python</h3>
+                        <p class="text-slate-400 text-sm mt-1 mb-2">Experience with Python & ML Models and Node.js.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Audioboogie (FB TTS)</span>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Hilton Admin Panel</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[25px] top-1.5 h-3 w-3 rounded-full border-2 border-slate-700 bg-slate-900">
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">DevOps & Deployment</h3>
+                        <p class="text-slate-400 text-sm mt-1 mb-2">Hosting Docker containers on AWS with Nginx/Certbot.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Blue Guam</span>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">AWS</span>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Docker</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[25px] top-1.5 h-3 w-3 rounded-full border-2 border-slate-700 bg-slate-900">
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">Frontend</h3>
+                        <p class="text-slate-400 text-sm mt-1 mb-2">React/Redux complex state management.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Peeramid</span>
+                            <span class="tech-tag text-xs px-2 py-1 rounded">Redux</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="text-emerald-500">04.</span> Professional Experience
+                </h2>
+                <div class="relative pl-8 space-y-8">
+                    <div class="timeline-line"></div>
+
+                    <!-- Hilton -->
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[25px] top-1.5 h-3 w-3 rounded-full border-2 border-slate-700 bg-slate-900">
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-semibold text-white">Hilton Guam Resort & Spa</h3>
+                            <span class="text-xs text-slate-500 font-mono">Apr 2024 -- May 2024</span>
+                        </div>
+                        <p class="text-emerald-400 text-sm mb-2">Software Engineer</p>
+                        <ul class="list-disc list-outside ml-4 text-slate-400 text-sm space-y-1">
+                            <li>Engineered a secure Gym Class Management Admin Panel using Node.js, enabling real-time
+                                schedule updates.</li>
+                            <li>Built a responsive guest enrollment landing page using React.js, optimizing UX for
+                                mobile
+                                users.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Blue Guam -->
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[25px] top-1.5 h-3 w-3 rounded-full border-2 border-slate-700 bg-slate-900">
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-semibold text-white">Blue Guam</h3>
+                            <span class="text-xs text-slate-500 font-mono">Oct 2023 -- Nov 2023</span>
+                        </div>
+                        <p class="text-emerald-400 text-sm mb-2">Software Engineer</p>
+                        <ul class="list-disc list-outside ml-4 text-slate-400 text-sm space-y-1">
+                            <li>Deployed secure production infrastructure for a 5-person agile team. Configured Nginx
+                                and
+                                Certbot for HTTPS.</li>
+                            <li>Containerized the full-stack application using Docker, hosting 4 orchestrated containers
+                                on
+                                AWS.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="text-emerald-500">05.</span> Education
+                </h2>
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                        <h3 class="text-lg font-semibold text-white">App Academy</h3>
+                        <span class="text-xs text-slate-500 font-mono">Nov 2022 -- Mar 2023</span>
+                    </div>
+                    <p class="text-emerald-400 text-sm mb-2">Full Stack Web Development Immersive</p>
+                    <p class="text-slate-400 text-sm">1000+ hour immersive curriculum focused on Ruby on Rails,
+                        JavaScript,
+                        and React.</p>
+                </div>
+            </section>
+
+            <!-- Why Me Checklist -->
+            <section class="glass-card p-8 rounded-xl bg-gradient-to-br from-slate-800/50 to-emerald-900/10">
+                <h2 class="text-2xl font-bold text-white mb-6">Why Me?</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="flex-shrink-0 h-6 w-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="block text-white font-medium">Execution First</span>
+                            <span class="text-slate-400 text-sm">200+ matched tasks via manual MVP, now
+                                automating.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="flex-shrink-0 h-6 w-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="block text-white font-medium">Living the Problem</span>
+                            <span class="text-slate-400 text-sm">I need the MDEC visa too. I am your user.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="flex-shrink-0 h-6 w-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="block text-white font-medium">Bootcamp Native</span>
+                            <span class="text-slate-400 text-sm">App Academy Grad – I understand the "train-to-hire"
+                                loop
+                                intuitively.</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer class="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+                <p>&copy; 2025 Adam Tomas. Built in 90 minutes.</p>
+            </footer>
+
+    </div>
+</body>
+
+</html>
